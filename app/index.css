@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('src/img/pattern.png');
+    background-attachment: fixed;
+}
+
+.container {
+    width: 80%;
+    max-width: 1300px;
+    padding: 20px 20px;
+    height: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: rgba(165, 165, 165, 0.041);
+    box-shadow: 0px 0px 1px black;
+}
+
+nav {
+    width: 100%;
+    background: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 30px;
+    padding: 10px;
+    text-transform: uppercase;
+    position: sticky;
+    transition: all ease .3s;
+    top: 0;
+}
+
+nav ul {
+    height: auto;
+    font-weight: bold;
+    font-size: 12px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 40px;
+    line-height: 30px;
+}
+
+nav ul li a {
+    transition: all ease .3s;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #1583cc;
+}
+
+nav a:hover {
+    color: #1583cc;
+}
+
+form label {
+    width: 44.25%;
+    color: #444;
+    font-size: 18px;
+    display: block;
+    margin-top: 10px;
+    margin-right: 8px;
+    margin-left: 20px;
+}
+
+.form {
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-sizing: border-box;
+    background: rgb(247, 247, 247);
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    width: 44.25%;
+    margin-left: 20px;
+    margin-right: 8px;
+    margin-top: 20px;
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+}
+
+input[type="text"] {
+    width: 90%;
+    margin-left: 20px;
+    margin-right: 8px;
+    margin-top: 5px;
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    display: block;
+    cursor: pointer;
+    width: 44.25%;
+    margin-top: 35px !important;
+    margin: 0 auto;
+    padding: 8px;
+    border: 0;
+    outline: 0;
+    border-radius: 3px;
+    background: #1583cc;
+    text-transform: uppercase;
+    color: white;
+    border-bottom: 1px solid #ccc;
+    transition: all ease .5s;
+}
+
+input[type="submit"]:hover {
+    transition: all ease .5s;
+    background: #1583ccbe;
+}
+
+input[type="number"]:focus {
+    background: #fee8d671;
+}
+
+.form span {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 5px;
+    font-size: 18px;
+    color: #444;
+    text-align: center;
+    display: none;
+}
+
+.form h1 {
+    width: 60%;
+    margin: 0 auto;
+    color: #444;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.results {
+    margin-top: 20px;
+}
+
+#send-quality input[type="number"] {
+    margin-left: 207px;
+    margin-top: 32px;
+    margin-bottom: 18px;
+}
+
+.sending-div {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 15px;
+    box-shadow: 0px 0px 5px #ccc;
+}
+
+@media screen and (max-width:1200px) {
+    input[type="submit"],
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+        margin: 0px 0px;
+        margin-top: 10px;
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    h1 {
+        font-size: 22px;
+        width: 100% !important;
+        margin: 0px 0px;
+    }
+    #send-quality input[type="number"] {
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .sending-div {
+        width: 100%;
+        padding: 0px 0px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .container {
+        width: 100% !important;
+        padding: 0px 0px;
+    }
+}
+
+
+/* nav {
+    width: 100%;
+    background: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 30px;
+    padding: 10px;
+    text-transform: uppercase;
+    position: sticky;
+    transition: all ease .3s;
+    top: 0;
+}
+
+nav ul {
+    height: auto;
+    font-weight: bold;
+    font-size: 12px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 40px;
+    line-height: 30px;
+}
+
+nav ul li a {
+    transition: all ease .3s;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+} */
+
+@media screen and (max-width:720px) {
+    nav {
+        padding: 0px;
+        text-align: center;
+    }
+    nav ul {
+        font-size: 10px;
+    }
+    nav ul li {
+        margin-right: 0px !important;
+        line-height: 30px;
+    }
+    nav ul li a {
+        padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width:510px) {
+    nav {
+        height: 70px;
+    }
+}

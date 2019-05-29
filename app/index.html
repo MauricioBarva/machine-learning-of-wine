@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/brain.js@1.0.0-rc.3/browser.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Machine-Learning con Brain js</title>
+
+</head>
+
+<body>
+
+
+    <nav>
+        <ul>
+            <li><a href="#send-features">Consultar por características</a></li>
+            <li><a href="#send-quality">Consultar por calidad</a></li>
+            <li><a href="#train-model">Entrenar modelo</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <form method="GET" class="form" id="send-features">
+            <h1>Por características</h1>
+            <input type="number" name="fa" step="any" placeholder="Acidez fija" required>
+
+            <input type="number" name="va" step="any" placeholder="Acidez volátil" required>
+
+            <input type="number" name="ca" step="any" placeholder="Ácido cítrico" required>
+
+            <input type="number" name="rs" step="any" placeholder="Azúcar residual" required>
+
+            <input type="number" name="ch" step="any" placeholder="Cloruros" required>
+
+            <input type="number" name="fsd" step="any" placeholder="Dióxido de azufre libre" required>
+
+            <input type="number" name="tsd" step="any" placeholder="Dióxido de azufre total" required>
+
+            <input type="number" name="den" step="any" placeholder="Densidad" required>
+
+            <input type="number" name="ph" step="any" placeholder="pH" required>
+
+            <input type="number" name="su" step="any" placeholder="Sulfatos" required>
+
+            <input type="number" name="al" step="any" placeholder="% Alcohol" required>
+
+            <span></span>
+            <input type="submit" name="enviar" value="Consultar % calidad">
+
+        </form>
+
+
+        <form class="form" method="GET" id="send-quality">
+            <h1>Por la calidad</h1>
+            <div class="sending-div">
+                <input type="number" name="quality" step="any" placeholder="% Calidad " required>
+                <input type="submit" name="calidad" value="Consultar características ">
+            </div>
+            <div class="results">
+                <label>Acidez fija</label>
+                <input type="text" name="fa_q" readonly>
+
+                <label>Acidez fija</label>
+                <input type="text" name="va_q" readonly>
+
+                <label>Ácido cítrico</label>
+                <input type="text" name="ca_q" readonly>
+
+                <label>Azúcar residual</label>
+                <input type="text" name="rs_q" readonly>
+
+                <label>Cloruros</label>
+                <input type="text" name="ch_q" readonly>
+
+                <label>Dióxido de azufre libre</label>
+                <input type="text" name="fsd_q" readonly>
+
+                <label>Dióxido de azufre total</label>
+                <input type="text" name="tsd_q" readonly>
+
+                <label>Densidad</label>
+                <input type="text" name="den_q" readonly>
+
+                <label>pH</label>
+                <input type="text" name="ph_q" readonly>
+
+                <label>Sulfatos</label>
+                <input type="text" name="su_q" readonly>
+
+                <label>% Alcohol</label>
+                <input type="text" name="al_q" readonly>
+            </div>
+
+        </form>
+
+        <form method="GET" class="form" id="train-model">
+            <h1>Entrenar Modelo</h1>
+            <input type="number" name="fa_train" step="any" placeholder="Acidez fija" required>
+
+            <input type="number" name="va_train" step="any" placeholder="Acidez volátil" required>
+
+            <input type="number" name="ca_train" step="any" placeholder="Ácido cítrico" required>
+
+            <input type="number" name="rs_train" step="any" placeholder="Azúcar residual" required>
+
+            <input type="number" name="ch_train" step="any" placeholder="Cloruros" required>
+
+            <input type="number" name="fsd_train" step="any" placeholder="Dióxido de azufre libre" required>
+
+            <input type="number" name="tsd_train" step="any" placeholder="Dióxido de azufre total" required>
+
+            <input type="number" name="den_train" step="any" placeholder="Densidad" required>
+
+            <input type="number" name="ph_train" step="any" placeholder="pH" required>
+
+            <input type="number" name="su_train" step="any" placeholder="Sulfatos" required>
+
+            <input type="number" name="al_train" step="any" placeholder="% Alcohol" required>
+
+            <input type="number" name="ql_train" min="1" max="5" step="any" placeholder="Calidad" required>
+
+            <input type="submit" name="enviar" value="Entrenar">
+
+
+        </form>
+    </div>
+
+
+
+
+    <script src="bundle.js "></script>
+</body>
+
+</html>
