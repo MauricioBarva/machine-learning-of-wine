@@ -29,7 +29,7 @@ export function sendFeaturesFunction(data) {
         })
     }
 
-    network.train(wineArray, { log: true, iterations: 1700 });
+    network.train(wineArray, { log: true, iterations: 1000 });
 
 
     let result = network.run({
@@ -80,7 +80,7 @@ export function sendQualityFunction(data) {
             }
         })
     }
-    network.train(wineArray, { log: true, iterations: 1700 });
+    network.train(wineArray, { log: true, iterations: 1000 });
 
 
     let result = network.run({

@@ -6,7 +6,7 @@ var controller = {
         return res.status(200).send(`<h1>Bienvenido a mi pagina de machine-learning</h1>`);
     },
     saveData: function(req, res) {
-        var data_id = "5cedeed90681c39745ee9807";
+        var data_id = "5cef18080681c39745eeb603";
 
         Wine.findByIdAndUpdate(data_id, { "$push": { data: wine_data } }, { new: true }, (error, data_stored) => {
             if (error) return res.status(500).send({ message: 'No se pudo guardar la información.' });
@@ -15,7 +15,7 @@ var controller = {
         });
     },
     createData: function(req, res) {
-        var data_id = "5cedeed90681c39745ee9807";
+        var data_id = "5cef18080681c39745eeb603";
         var body = req.body;
         var wine = {
             fixedAcidity: body.fixedAcidity,
@@ -40,7 +40,7 @@ var controller = {
             .catch(error => res.status(500).send(error));
     },
     getData: function(req, res) {
-        var data_id = "5cedeed90681c39745ee9807";
+        var data_id = "5cef18080681c39745eeb603";
         Wine.findById(data_id, (error, data_wine) => {
             if (error) return res.status(500).send({ message: 'Error al devolver los datos.' });
             if (!data_wine) return res.status(404).send({ message: 'No se encontro información' });
