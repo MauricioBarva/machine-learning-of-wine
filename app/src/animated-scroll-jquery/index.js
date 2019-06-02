@@ -15,3 +15,11 @@ export function animatedScroll() {
 
 
 }
+
+export function showSpanModelTrained() {
+    var $train_model_span = $('#train-model').find('span');
+    $train_model_span.css('display', 'block');
+    setTimeout(function() {
+        $train_model_span.css('display', 'none');
+    }, 3000);
+}

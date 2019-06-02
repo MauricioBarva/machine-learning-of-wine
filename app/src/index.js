@@ -1,7 +1,7 @@
 import { getData, trainData } from './services/index';
 import { send_features, send_quality, train_model } from './forms-send-data/index';
 import { sendFeaturesFunction, sendQualityFunction } from './brain-network/index';
-import { animatedScroll } from './animated-scroll/index';
+import { animatedScroll, showSpanModelTrained } from './animated-scroll-jquery/index';
 
 //Scroll
 animatedScroll();
@@ -22,7 +22,10 @@ send_quality.addEventListener('submit', function(e) {
     });
 });
 
+//Train model
 train_model.addEventListener('submit', function(e) {
     e.preventDefault();
     trainData();
+    showSpanModelTrained();
+    // span model trained
 })
