@@ -43,7 +43,7 @@ var controller = {
         var data_id = "5cedeed90681c39745ee9807";
         Wine.findById(data_id, (error, data_wine) => {
             if (error) return res.status(500).send({ message: 'Error al devolver los datos.' });
-            if (!data_wine) return res.stauts(404).send({ message: 'No se encontro información' });
+            if (!data_wine) return res.status(404).send({ message: 'No se encontro información' });
             return res.status(200).send(data_wine);
         });
     }
